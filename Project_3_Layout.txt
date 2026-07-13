@@ -1,0 +1,17 @@
+azure-enterprise-medallion-pipeline/
+│
+├── adf/
+│   ├── pipelines/
+│   │   └── pl_ingest_multisource_to_bronze.json   # ADF Pipeline configuration JSON
+│   └── linked_services/
+│       └── ls_adls_gen2_bronze.json               # ADF securely managed storage link
+│
+├── config/
+│   ├── cluster_policy.json                        # Databricks infra cost controls
+│   └── unity_catalog_governance.sql              # Unity Catalog Access Control Lists (ACLs)
+│
+├── notebooks/
+│   ├── 01_fnc_silver_transformation.py            # PySpark Complex Transformations & Cryptographic Masking
+│   └── 02_fnc_synapse_gold_load.py                # High-speed export connector to Synapse DW
+│
+└── README.md                                      # Executive-level technical documentation
